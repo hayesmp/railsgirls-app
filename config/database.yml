@@ -19,7 +19,10 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: mysql2
+  encoding: utf8
+  database: dipped-bonhomie
+  username: test_user
+  password: password
+  host: dc569e42e9277b9ebfa533e5b852cb143f3cfe56.rackspaceclouddb.com
+  port: 3306

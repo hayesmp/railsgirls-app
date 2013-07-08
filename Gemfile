@@ -15,8 +15,7 @@ gem "berkshelf"
 gem 'capistrano'
 #gem 'capistrano-rbenv'
 gem 'unicorn'
-
-gem 'taps'
+gem 'heroku'
 
 group :development do
   gem 'sqlite3'
