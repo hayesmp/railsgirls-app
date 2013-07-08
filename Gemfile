@@ -1,13 +1,23 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'pg'
 gem 'carrierwave'
 
+gem 'rumm', '0.0.7'
+gem "knife-solo", ">= 0.3.0pre3"
+gem "berkshelf"
+
+gem 'capistrano'
+#gem 'capistrano-rbenv'
+gem 'unicorn'
+
+gem 'taps'
 
 # Gems used only for assets and not required
 # in production environments by default.
