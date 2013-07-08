@@ -14,3 +14,6 @@
 /log/*.log
 /tmp
 .idea/
+chef-kitchen/
+setup/
+.DS_Store
