@@ -187,6 +187,7 @@ GEM
       mixlib-shellout
       systemu
       yajl-ruby
+    pg (0.15.1)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -305,6 +306,7 @@ DEPENDENCIES
   jquery-rails
   knife-solo (>= 0.3.0pre3)
   mysql2
+  pg
   rails (= 3.2.12)
   rumm (= 0.0.7)
   sass-rails (~> 3.2.3)
