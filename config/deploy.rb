@@ -41,7 +41,7 @@ after "deploy:restart", "deploy:cleanup"
 # Server specific
 # ----------------
 set :user, "root"
-server "166.78.111.12", :web, :app, :db, :primary => true
+server "198.61.170.19", :web, :app, :db, :primary => true
 set :deploy_to, "/home/apps/#{application}"
 set :rails_env, "production"
 
