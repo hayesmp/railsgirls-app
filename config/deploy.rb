@@ -14,6 +14,7 @@ set :deploy_via, :remote_cache
 # =============
 set :use_sudo, false
 ssh_options[:forward_agent] = true
+default_run_options[:pty] = true
 
 # Bundler
 # -------

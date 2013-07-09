@@ -163,6 +163,7 @@ GEM
     mvcli (0.0.9)
       activesupport (>= 3.0)
       map
+    mysql2 (0.3.11)
     net-http-persistent (2.8)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
@@ -186,7 +187,6 @@ GEM
       mixlib-shellout
       systemu
       yajl-ruby
-    pg (0.15.1)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -304,7 +304,7 @@ DEPENDENCIES
   heroku
   jquery-rails
   knife-solo (>= 0.3.0pre3)
-  pg
+  mysql2
   rails (= 3.2.12)
   rumm (= 0.0.7)
   sass-rails (~> 3.2.3)
