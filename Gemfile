@@ -17,7 +17,7 @@ gem 'capistrano'
 gem 'unicorn'
 gem 'taps'
 gem 'heroku'
-gem 'therubyracer'
+
 
 group :development do
   gem 'sqlite3'
@@ -38,6 +38,7 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'therubyracer'
 end
 
 gem 'jquery-rails'
