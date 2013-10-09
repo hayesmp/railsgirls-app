@@ -46,6 +46,25 @@ set :deploy_to, "/home/apps/#{application}"
 set :rails_env, "production"
 
 
+# Data migration task
+# ----------------
+namespace :migrate do
+  task :data do
+    shellwords = Shellwords.shellwords(`heroku info -s`)
+    pairs = shellwords.map{ |s| s.split('=', 2) }.flatten
+    h = Hash[*pairs]
+    _cset(:heroku_app) {h['name']}
+
+
+    if db_config = YAML.load_file('config/database.yml')['production']
+      api_key = `heroku auth:token`
+      remote_db = "mysql2://#{db_config['username']}:#{db_config['password']}@#{db_config['host']}:#{db_config['port']}/#{db_config['database']}"
+      run "HEROKU_API_KEY=#{api_key} bash -c 'cd /home/apps/app1/current && bundle exec heroku db:pull #{remote_db} --app #{heroku_app} --confirm #{heroku_app}'"
+    end
+  end
+end
+
+
 # If you are using Passenger mod_rails uncomment this:
 #namespace :deploy do
 #  task :start do
