@@ -17,6 +17,7 @@ gem 'capistrano'
 gem 'unicorn'
 gem 'taps'
 gem 'heroku'
+gem 'sextant'
 
 
 group :development do
